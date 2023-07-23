@@ -6,3 +6,5 @@ const NC_API_KEY = '2Ufv-6DZHidEONEFO54z1XcRDlnTkEJFrrs41SnclFo';
 const MS_API_KEY = '0958b5e3b09106c26e09e4d2989c004c';
 
 const ND_API_KEY = 'pub_2662456b38b3fe4688c712268f03cfd6e5370';
+
+const NEWSAPI_KEY = 'e23c4f3c33e34a7ab9e2bfab2dcfe29f';

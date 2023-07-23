@@ -86,3 +86,16 @@ function searchNewsData(){
       window.nd_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
     })
 }
+
+function searchNewsAPI(){
+  const search = window.napi_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://newsapi.org/v2/everything?q=${search}&from=2023-06-23&sortBy=publishedAt&apiKey=${NEWSAPI_KEY}`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.napi_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
