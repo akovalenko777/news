@@ -1,4 +1,3 @@
-import {WN_API_KEY} from './keys.js';
 
 function searchWorldNews(){
   const search = window.wn_search.value;
