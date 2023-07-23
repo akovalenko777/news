@@ -126,6 +126,50 @@
       </div>
     </div>
 
+    <div class="card mb-5">
+      <div class="card-header">
+        <a href="https://currentsapi.services/en" target="_blank">Currents API</a>
+      </div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-10">
+            <input type="text" id="curr_search" class="form-control" value="music">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-success" onclick="searchCurrentsAPI()">Search</button>
+            <button class="btn btn-primary" disabled>Detail</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <pre id="curr_result" class="result"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5">
+      <div class="card-header">
+        <a href="https://gnews.io/" target="_blank">GNews</a>
+      </div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-10">
+            <input type="text" id="gn_search" class="form-control" value="music">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-success" onclick="searchGNews()">Search</button>
+            <button class="btn btn-primary" disabled>Detail</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <pre id="gn_result" class="result"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="js/keys.js"></script>

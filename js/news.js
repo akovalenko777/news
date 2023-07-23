@@ -99,3 +99,29 @@ function searchNewsAPI(){
       window.napi_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
     })
 }
+
+function searchCurrentsAPI(){
+  const search = window.curr_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://api.currentsapi.services/v1/search?apiKey=${CURRENTS_KEY}&language=us&keywords=${search}&type=1&page_size=10&limit=10`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.curr_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchGNews(){
+  const search = window.gn_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://gnews.io/api/v4/search?q=${search}&apikey=${GNEWS_KEY}&lang=en`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.gn_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
