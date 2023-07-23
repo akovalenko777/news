@@ -1,5 +1,5 @@
 // const  WN_API_KEY = '267ef816d38d49e98556ce5a18a7a1e1';
-const  WN_API_KEY = 'd7753c7d31134f56b739dca113e91b6d';
+const WN_API_KEY = 'd7753c7d31134f56b739dca113e91b6d';
 
 const NC_API_KEY = '2Ufv-6DZHidEONEFO54z1XcRDlnTkEJFrrs41SnclFo';
 
@@ -12,5 +12,11 @@ const NEWSAPI_KEY = 'e23c4f3c33e34a7ab9e2bfab2dcfe29f';
 const CURRENTS_KEY = '1SZhbdpm03pqgQ1RyNrjirZo3EKvhbfDHMqDSI0zMrN-VNMb';
 
 const GNEWS_KEY = '92f3c6ea98a04f0b6d89689b4d8990fd';
+
+const MARKET_KEY = 'OfdKVv6VWYbtl1wGNMdiIRHKSXoBOIvLwjZP91td';
+
+const GUARDIAN_KEY = '1628fe08-c4ed-4347-aa18-2989c5d2b7c8';
+
+const THE_NEWS_KEY = 'MYUxbc1NDUBjlfDV43gpE9CvgBEMWklL8Zv52t6R';
 
 

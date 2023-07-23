@@ -125,3 +125,69 @@ function searchGNews(){
       window.gn_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
     })
 }
+
+function searchMarketAux(){
+  const search = window.ma_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://api.marketaux.com/v1/news/all?search=${search}&api_token=${MARKET_KEY}&language=en&limit=10`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.ma_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchMarketAuxDetail(){
+  const uuid = '180cbb2d-9f78-4db7-a412-c63302a1fd7a';
+  fetch(`https://api.marketaux.com/v1/news/uuid/${uuid}?api_token=${MARKET_KEY}`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.ma_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchGuardian(){
+  const search = window.tg_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://content.guardianapis.com/search?q=${search}&api-key=${GUARDIAN_KEY}`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.tg_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchGuardianDetail(){
+  const id = 'technology/2023/jul/19/tesla-q2-2023-earnings-production-report-elon-musk';
+  fetch(`https://content.guardianapis.com/${id}?api-key=${GUARDIAN_KEY}`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.tg_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchTheNews(){
+  const search = window.tn_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://api.thenewsapi.com/v1/news/top?search=${search}&api_token=${THE_NEWS_KEY}&language=en&limit=10`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.tn_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchTheNewsDetail(){
+  const uuid = '0f730908-eb1c-4ac9-98ba-2fa6bbc2e33a';
+  fetch(`https://api.thenewsapi.com/v1/news/uuid/${uuid}?api_token=${THE_NEWS_KEY}`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.tn_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
