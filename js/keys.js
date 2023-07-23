@@ -1,1 +1,4 @@
-const  WN_API_KEY = '267ef816d38d49e98556ce5a18a7a1e1';
+// const  WN_API_KEY = '267ef816d38d49e98556ce5a18a7a1e1';
+const  WN_API_KEY = 'd7753c7d31134f56b739dca113e91b6d';
+
+const NC_API_KEY = '2Ufv-6DZHidEONEFO54z1XcRDlnTkEJFrrs41SnclFo';
