@@ -29,7 +29,6 @@ function searchWorldNews(){
     .then(resp => resp.json())
     .then(resp => {
       window.wn_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
-      console.log(resp);
     })
 }
 
@@ -39,7 +38,6 @@ function detailWorldNews(){
     .then(resp => resp.json())
     .then(resp => {
       window.wn_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
-      console.log(resp);
     })
 }
 
@@ -60,6 +58,31 @@ function searchNewsCatcher(){
     .then(resp => resp.json())
     .then(resp => {
       window.nc_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
-      console.log(resp);
+    })
+}
+
+function searchMediaSteck(){
+  const search = window.ms_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://api.mediastack.com/v1/news?access_key=${MS_API_KEY}&keywords=${search}&languages=en`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.ms_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
+    })
+}
+
+function searchNewsData(){
+  const search = window.nd_search.value;
+  if(search === ''){
+    alert("enter search request");
+    return false;
+  }
+  fetch(`https://newsdata.io/api/1/news?apikey=${ND_API_KEY}&q=${search}&language=en`)
+    .then(resp => resp.json())
+    .then(resp => {
+      window.nd_result.innerHTML = syntaxHighlight(JSON.stringify(resp, undefined, 4));
     })
 }

@@ -59,6 +59,51 @@
         </div>
       </div>
     </div>
+
+    <div class="card mb-5">
+      <div class="card-header">
+        <a href="https://mediastack.com/" target="_blank">Mediasteck</a>
+      </div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-10">
+            <input type="text" id="ms_search" class="form-control" value="tesla">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-success" onclick="searchMediaSteck()">Search</button>
+            <button class="btn btn-primary" disabled>Detail</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <pre id="ms_result" class="result"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5">
+      <div class="card-header">
+        <a href="https://newsdata.io/" target="_blank">News Data</a>
+      </div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-10">
+            <input type="text" id="nd_search" class="form-control" value="tesla">
+          </div>
+          <div class="col-2">
+            <button class="btn btn-success" onclick="searchNewsData()">Search</button>
+            <button class="btn btn-primary" disabled>Detail</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <pre id="nd_result" class="result"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="js/keys.js"></script>
